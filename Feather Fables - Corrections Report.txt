@@ -1,0 +1,498 @@
+========================================================================
+FEATHER FABLES — EDITORIAL CORRECTIONS REPORT
+========================================================================
+
+Total corrections applied : 101
+Unique correction patterns: 37
+
+Scope: typos, name standardizations, "Late" prefix additions,
+missing articles, PDF ligature artifacts (ﬁ → fi, ﬂ → fl),
+punctuation fixes, and obvious grammar slips.
+Cultural phrasings, Indian English idioms, and the author's
+voice were preserved unchanged.
+
+========================================================================
+CORRECTIONS BY SECTION
+========================================================================
+
+─── Section: Opening Verse (Dva Suparna)  (approx. page 3) ───
+
+[1] Type   : grammar
+    Original: "is identifies with"
+    Fixed   : "identifies with"
+    Reason  : extra auxiliary verb
+    Context : ...lains that as long as the first bird (the person) is identifies with the "eating" (the actions and results), it remain...
+
+[2] Type   : punctuation
+    Original: "Symbolism1."
+    Fixed   : "Symbolism. 1."
+    Reason  : missing space and period between sentence and list
+    Context : ...The Metaphorical Symbolism1. The Tree: Represents the Body or the material wor...
+
+[3] Type   : punctuation
+    Original: ".T"
+    Fixed   : ". T"
+    Reason  : missing space after sentence-ending period
+    Context : ...eternal witness (Sakshi), unaffected by the world.The Philosophical LessonThe Upanishad explains that...
+
+
+─── Section: Blessed Moments with Daaji  (approx. page 4) ───
+
+[4] Type   : spelling
+    Original: "Daji"
+    Fixed   : "Daaji"
+    Reason  : corrected spelling per author
+    Count   : 3 occurrences in this section
+    Context : ...Blessed Moments with Daji...
+
+[5] Type   : punctuation
+    Original: ".T"
+    Fixed   : ". T"
+    Reason  : missing space after sentence-ending period
+    Count   : 2 occurrences in this section
+    Context : ...d clarity in my thoughts, behaviour, and lifestyle.This inner journey slowly reflected in every part o...
+
+[6] Type   : punctuation
+    Original: ".W"
+    Fixed   : ". W"
+    Reason  : missing space after sentence-ending period
+    Context : ...lk through life with harmony, joy, and inner peace.Which one is better...
+
+[7] Type   : editorial
+    Original: " Which one is better"
+    Fixed   : ""
+    Reason  : removed editorial note "Which one is better" (not part of final text)
+    Context : ...k through life with harmony, joy, and inner peace. Which one is better...
+
+[8] Type   : spelling
+    Original: "Mathrukripa"
+    Fixed   : "Matru Kripa"
+    Reason  : name standardization
+    Context : ...(Mathrukripa)...
+
+
+─── Section: My Journey of Photography  (approx. page 5) ───
+
+[9] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Count   : 2 occurrences in this section
+    Context : ...My Journey of  Photography...
+
+[10] Type   : spelling
+    Original: "Madumathi"
+    Fixed   : "Madhumathi"
+    Reason  : name spelling standardization
+    Context : ...ay. The studio was owned by Mr. Keshava Nayak and Madumathi akka. Watching them work kindled my passion — slo...
+
+[11] Type   : editorial
+    Original: "Mr. Keshava Nayak"
+    Fixed   : "Late Mr. Keshava Nayak"
+    Reason  : added "Late" prefix per author instruction
+    Context : ...shop in Vittal every day. The studio was owned by Mr. Keshava Nayak and Madhumathi akka. Watching them work kindled m...
+
+[12] Type   : editorial
+    Original: "Madhumathi akka"
+    Fixed   : "Late Madhumathi Akka"
+    Reason  : added "Late" prefix + standardized capitalization per author
+    Context : ...he studio was owned by Late Mr. Keshava Nayak and Madhumathi akka. Watching them work kindled my passion — slowly,...
+
+[13] Type   : grammar
+    Original: "I didn't know much about of birds"
+    Fixed   : "I didn't know much about birds"
+    Reason  : extraneous preposition
+    Context : ...In my early days, I didn't know much about of birds or their habitats. One day, after I posted a pict...
+
+[14] Type   : spelling
+    Original: "Mathrukripa"
+    Fixed   : "Matru Kripa"
+    Reason  : name standardization
+    Context : ...(Mathrukripa)...
+
+
+─── Section: My Family and Our Legacy  (approx. page 6) ───
+
+[15] Type   : editorial
+    Original: "Smt. Bharathi Pai"
+    Fixed   : "Late Smt. Bharathi Pai"
+    Reason  : added "Late" prefix per author instruction
+    Count   : 2 occurrences in this section
+    Context : ...My father, Late P. Janardhan Pai, and my mother, Smt. Bharathi Pai, are the foundation and inspiration of my life....
+
+[16] Type   : grammar
+    Original: "She was perfect homemaker"
+    Fixed   : "She was a perfect homemaker"
+    Reason  : missing article
+    Context : ...and endless care has been our greatest blessing. She was perfect homemaker and the emotional backbone of our family, support...
+
+[17] Type   : punctuation
+    Original: ".T"
+    Fixed   : ". T"
+    Reason  : missing space after sentence-ending period
+    Context : ...Pai, have always been pillars of love and support.Together, our family stands as one — built on faith...
+
+[18] Type   : spelling
+    Original: "demiss"
+    Fixed   : "demise"
+    Reason  : spelling correction
+    Context : ...ture quietly remained alive within him. After the demiss of his father, as life slowly allowed him moments...
+
+[19] Type   : whitespace
+    Original: "   "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...mple, the importance of following what brings joy,   making time for oneself and pursuing passions rega...
+
+[20] Type   : whitespace
+    Original: "    "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...r themselves ,our hearts are filled with pride and    happiness. Watching them do what they truly love,...
+
+
+─── Section: From My Twin Daughters  (approx. page 7) ───
+
+[21] Type   : spelling
+    Original: "Sharaddha"
+    Fixed   : "Shraddha"
+    Reason  : name spelling standardization
+    Context : ...Written by:  Sharaddha Pai Phadnis and Shereya Pai Phadnis­...
+
+[22] Type   : spelling
+    Original: "Shereya"
+    Fixed   : "Shreya"
+    Reason  : name spelling standardization
+    Context : ...Written by:  Shraddha Pai Phadnis and Shereya Pai Phadnis­...
+
+[23] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...Written by:  Shraddha Pai Phadnis and Shreya Pai Phadnis­...
+
+
+─── Section: My Life Partner  (approx. page 8) ───
+
+[24] Type   : punctuation
+    Original: ".B"
+    Fixed   : ". B"
+    Reason  : missing space after sentence-ending period
+    Context : ...birding trips, I often found myself feeling lonely.But today, my heart is filled only with pride and a...
+
+[25] Type   : punctuation
+    Original: ".W"
+    Fixed   : ". W"
+    Reason  : missing space after sentence-ending period
+    Context : ...t determination with which he followed his passion.What amazes me the most is this—he may not have pat...
+
+[26] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...rought him to this moment.“A birder in true sense”  ­­­­This book is not just about photography; it is...
+
+
+─── Section: My elder brother’s endeavour  (approx. page 9) ───
+
+[27] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Count   : 2 occurrences in this section
+    Context : ...t species of birds and animals from all over India  —  and even from the wild plains of Maasai Mara, K...
+
+[28] Type   : spelling
+    Original: "Mangaluru"
+    Fixed   : "Mangalore"
+    Reason  : place name standardization
+    Context : ...i (Blackbuck Reserve), Banavasi, Mundagod, Mulky, Mangaluru, Bantwal, Alangar, Vittla, along with Kuduremukha...
+
+
+─── Section: My observation :  (approx. page 10) ───
+
+[29] Type   : punctuation
+    Original: ".T"
+    Fixed   : ". T"
+    Reason  : missing space after sentence-ending period
+    Context : ...itude and appreciation for life's fleeting moments.These themes collectively highlight the transformat...
+
+[30] Type   : punctuation
+    Original: "lifeThrough his lens"
+    Fixed   : "life. Through his lens"
+    Reason  : missing period and space between sentences
+    Context : ...eativity, once sown, can flourish at any stage of lifeThrough his lens, Radhakrishna invites us to slow down and observe...
+
+[31] Type   : punctuation
+    Original: ".H"
+    Fixed   : ". H"
+    Reason  : missing space after sentence-ending period
+    Count   : 2 occurrences in this section
+    Context : ...grapher does not chase the moment but waits for it.His photography invites you to slow down breath...
+
+[32] Type   : punctuation
+    Original: ".I"
+    Fixed   : ". I"
+    Reason  : missing space after sentence-ending period
+    Context : ...e and truly see Nature as it exists.In the wild flora and fauna share a heartbeat. Coex...
+
+[33] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Count   : 2 occurrences in this section
+    Context : ...ate his journey of bird watching. "We often do not  encounter rare species, so his repertoire of pics...
+
+[34] Type   : spelling
+    Original: "sustainance"
+    Fixed   : "sustenance"
+    Reason  : spelling correction
+    Context : ...ople and birds and the ecosystem that is the very sustainance of life on this earth....
+
+
+─── Section: Dva Suparna...  (approx. page 11) ───
+
+[35] Type   : whitespace
+    Original: "        "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...eing published, and to its creator my young friend        Radhakrishna Pai....
+
+[36] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Count   : 7 occurrences in this section
+    Context : ...JCI of Vittal and were attending regular meetings.  Then one after another both of us were elected as...
+
+[37] Type   : whitespace
+    Original: "       "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...o appreciate and encourage your dedication to bird       photography. Through your lens, birds find a voice...
+
+[38] Type   : punctuation
+    Original: ".A"
+    Fixed   : ". A"
+    Reason  : missing space after sentence-ending period
+    Context : ...the canopy, the forest awoke in golden whispers.Amid this calm beauty, a gentle flutter caught my e...
+
+
+─── Section: The Flame of Coorg  (approx. page 12) ───
+
+[39] Type   : whitespace
+    Original: "              "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...l, glowing like fire among the leaves, and later a              Grey-headed Bulbul, perched elegantly on a mossy b...
+
+
+─── Section: The Watchful Guardian – Indian Eagle Owl of Hesaraghatta  (approx. page 13) ───
+
+[40] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Count   : 17 occurrences in this section
+    Context : ...In  the  peaceful  grasslands  of  Hesaraghatta,  the...
+
+
+─── Section: Paradise Flycatcher – A Visitor to Paradise, Mangalore Story  (approx. page 14) ───
+
+[41] Type   : spelling
+    Original: "Mangaluru"
+    Fixed   : "Mangalore"
+    Reason  : place name standardization
+    Count   : 2 occurrences in this section
+    Context : ...Paradise Flycatcher – A Visitor to Paradise, Mangaluru Story...
+
+
+─── Section: Montagu's Harrier – The Elegant Hunter of Bhigwan  (approx. page 15) ───
+
+[42] Type   : spelling
+    Original: "Bhigvan"
+    Fixed   : "Bhigwan"
+    Reason  : place name standardization
+    Count   : 2 occurrences in this section
+    Context : ...Montagu's Harrier – The Elegant Hunter of Bhigvan...
+
+
+─── Section: Spotted Owlet — A Magical Moment at Pilikula  (approx. page 16) ───
+
+[43] Type   : spelling
+    Original: "Mangaluru"
+    Fixed   : "Mangalore"
+    Reason  : place name standardization
+    Context : ...afternoon after a long birding session at Kenjar, Mangaluru. Our group — Mr. Vivek Nayak, Mr. Vaman Kamath,...
+
+[44] Type   : whitespace
+    Original: "      "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...re. Our group — Mr. Vivek Nayak, Mr. Vaman Kamath,      Mr. Abhay Yellore and Dr. Ashwin Sujir — had spent...
+
+[45] Type   : whitespace
+    Original: "                     "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...de!" he said breathlessly. 																							                     In a flash, we all ran out, picked up our cameras...
+
+
+─── Section: Black-backed Kingfisher — A Jewel from Paradise  (approx. page 17) ───
+
+[46] Type   : spelling
+    Original: "Mangaluru"
+    Fixed   : "Mangalore"
+    Reason  : place name standardization
+    Count   : 2 occurrences in this section
+    Context : ...At Paradise, Mangaluru, I was blessed to capture the tiny yet dazzling B...
+
+
+─── Section: Leopard and Cub — Moments from the Heart of Maasai Mara  (approx. page 18) ───
+
+[47] Type   : spelling
+    Original: "Chafi"
+    Fixed   : "Chaphi"
+    Reason  : place name standardization
+    Count   : 2 occurrences in this section
+    Context : ...The Gem of Chafi, Sattal...
+
+[48] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...st, bold black-and-white plumage, and piercing eye  reflected the spirit of the wild Himalayas....
+
+
+─── Section: Blue-faced Malkoha – A Moment with My Mentor  (approx. page 19) ───
+
+[49] Type   : spelling
+    Original: "Durghga"
+    Fixed   : "Durga"
+    Reason  : place name typo
+    Context : ...At the lush forests of Durghga Wildlife Sanctuary, Karkala, I was birding with m...
+
+
+─── Section: Black-capped Kingfisher — A Memorable Zuari River Experience  (approx. page 20) ───
+
+[50] Type   : spelling
+    Original: "spieces"
+    Fixed   : "species"
+    Reason  : spelling correction
+    Context : ...s home to around 15 types of Avicennia (different spieces of bird) mangroves, each supporting a unique ecos...
+
+
+─── Section: The Frame Born in Paradise Malabar Trogon — Alangar Vittla  (approx. page 21) ───
+
+[51] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Count   : 2 occurrences in this section
+    Context : ...unnamed. How could we? We called it — "Paradise."  Even today, that very name gives us goosebumps. On...
+
+
+─── Section: Greater Flamingo – The Grace of Bhigwan Waters  (approx. page 22) ───
+
+[52] Type   : spelling
+    Original: "Bhigvan"
+    Fixed   : "Bhigwan"
+    Reason  : place name standardization
+    Count   : 2 occurrences in this section
+    Context : ...Greater Flamingo – The Grace of Bhigvan Waters...
+
+[53] Type   : spelling
+    Original: "Bhigawan"
+    Fixed   : "Bhigwan"
+    Reason  : place name standardization
+    Count   : 2 occurrences in this section
+    Context : ...Bhigawan — a land that glows like a mirror of water, a sac...
+
+
+─── Section: Yellow-eyed Babbler - Bhigwan Memory  (approx. page 23) ───
+
+[54] Type   : spelling
+    Original: "Bhigawan"
+    Fixed   : "Bhigwan"
+    Reason  : place name standardization
+    Context : ...Yellow-eyed Babbler - Bhigawan Memory...
+
+[55] Type   : spelling
+    Original: "Mangaluru"
+    Fixed   : "Mangalore"
+    Reason  : place name standardization
+    Count   : 2 occurrences in this section
+    Context : ...In the warm light of morning at Konchady, Mangaluru  as the coastal breeze carried the scent of earth...
+
+[56] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...n the warm light of morning at Konchady, Mangalore  as the coastal breeze carried the scent of earth a...
+
+
+─── Section: Plum-headed Parakeet in Flight Sattal - Uttarakhand  (approx. page 24) ───
+
+[57] Type   : spelling
+    Original: "Mathrukripa"
+    Fixed   : "Matru Kripa"
+    Reason  : name standardization
+    Context : ...P. Radhakrishna Pai Mathrukripa...
+
+
+─── Section: Chestnut-bellied Sandgrouse – Bhigwan's Desert Melody  (approx. page 25) ───
+
+[58] Type   : punctuation
+    Original: ".T"
+    Fixed   : ". T"
+    Reason  : missing space after sentence-ending period
+    Context : ...rning about birds, lenses, and the joy of patience.Today, he is no longer just a fisherman. He is "Nar...
+
+
+─── Section: Whispers of Thattekkad  (approx. page 26) ───
+
+[59] Type   : spelling
+    Original: "Mangaluru"
+    Fixed   : "Mangalore"
+    Reason  : place name standardization
+    Context : ...One calm morning at Kenjar, Mangaluru, I set out with my birding friends, the air fresh...
+
+
+─── Section: Greeting from, My Twin Daughter  (approx. page 27) ───
+
+[60] Type   : spelling
+    Original: "Sharaddha"
+    Fixed   : "Shraddha"
+    Reason  : name spelling standardization
+    Context : ...Sharaddha Pai Phadnis and Shereya Pai Phadnis­...
+
+[61] Type   : spelling
+    Original: "Shereya"
+    Fixed   : "Shreya"
+    Reason  : name spelling standardization
+    Context : ...Shraddha Pai Phadnis and Shereya Pai Phadnis­...
+
+
+─── Section: Art by my twin daughter  (approx. page 28) ───
+
+[62] Type   : editorial
+    Original: "Smt. Madhumathi Akka"
+    Fixed   : "Late Smt. Madhumathi Akka"
+    Reason  : added "Late" prefix per author instruction
+    Context : ...Keshava Nayak,Smt. Madhumathi Akka, Shri Sudhakar Mam, Shivashankar Karkala, Arunold...
+
+[63] Type   : whitespace
+    Original: "  "
+    Fixed   : " "
+    Reason  : collapsed multiple spaces
+    Context : ...Thanks to	:	Sri. Ullas Kamath, Sri Jayaprakash Sir  Sri Ananthakrishna Hebbar, Sri. Shridhar Kodakkal...
+
+
+========================================================================
+CORRECTION CATEGORIES SUMMARY
+========================================================================
+  whitespace     : 44
+  spelling       : 33
+  punctuation    : 15
+  editorial      : 6
+  grammar        : 3
