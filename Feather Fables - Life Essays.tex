@@ -1,3 +1,4 @@
+% !TEX program = xelatex
 \documentclass[12pt]{article}
 
 % --- Page geometry: A4 landscape ---
@@ -98,6 +99,27 @@
   \par
 }
 
+% Single-column essay block: 17 cm wide, horizontally centered on the page.
+% Replaces \begin{multicols}{2}...\end{multicols} for prose essays where the
+% 2-column measure was breaking words too aggressively. Existing global
+% \parindent (1.2em) and \parskip (0pt) give classical book-style paragraphs.
+\newenvironment{essay}{%
+  \begin{center}\begin{minipage}{17cm}%
+}{%
+  \end{minipage}\end{center}%
+}
+
+% Bird image with placeholder fallback. Renders the photo if found, otherwise
+% draws the same dashed PHOTO box the document uses for unidentified images.
+% Use inside the 12.0cm x 11.5cm minipage already wrapping every bird photo.
+\newcommand{\birdimage}[1]{%
+  \IfFileExists{#1}{%
+    \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{#1}%
+  }{%
+    \begin{tikzpicture}\draw[dashed, line width=0.4pt, color=ink!35] (0,0) rectangle (12.0,-11.5);\node[anchor=center] at (6.0,-5.75) {\headingfont\fontsize{14pt}{16pt}\selectfont\textcolor{ink!45}{PHOTO MISSING}};\end{tikzpicture}%
+  }%
+}
+
 % --- Title page / centered helpers ---
 \usepackage{xcolor}
 \definecolor{ink}{HTML}{1f1f1f}
@@ -189,7 +211,7 @@
 
 \begin{longtable}{@{}p{3em}@{}p{15cm}@{}p{1cm}@{}}
 \tocgroup{OPENING}
-\tocrow{01}{Opening Verse — Dva Suparna}{From the Mundaka Upanishad}{4}
+\tocrow{01}{Opening Verse — Dva Suparna}{From the Mandukya Upanishad}{4}
 
 \tocgroup{REFLECTIONS}
 \tocrow{02}{Blessed Moments with Daaji}{P. Radhakrishna Pai}{5}
@@ -216,9 +238,9 @@
 \tocrow{17}{The Emerald Whisper}{Common Green Magpie · Lathchapper}{\pageref{bird:4}}
 \tocrow{18}{The Flame of Coorg}{Flame-throated Bulbul · Coorg}{\pageref{bird:5}}
 \tocrow{19}{The Song of the Hills — Birding Journey to Coorg}{P. Radhakrishna Pai}{\pageref{bird:6}}
-\tocrow{20}{The Jewel of Sattal}{Red-bellied Leiothrix · Sattal}{\pageref{bird:7}}
+\tocrow{20}{The of Sattal}{Red-bellied Leiothrix · Sattal}{\pageref{bird:7}}
 \tocrow{21}{The Call of the Hills}{Oriental Pied Hornbill · Darjeeling}{\pageref{bird:8}}
-\tocrow{22}{The Emerald in the Rain}{Common Emerald Dove · Durga WLS}{\pageref{bird:9}}
+\tocrow{22}{A Jewel in the Rain}{Common Emerald Dove · Durga WLS}{\pageref{bird:9}}
 \tocrow{23}{The Whispering Song}{Grey-headed Bulbul · Somvarpet}{\pageref{bird:10}}
 \end{longtable}
 \newpage
@@ -249,28 +271,28 @@
 \begin{enumerate}[leftmargin=1.4em, itemsep=0.35em]
   \item The Tree: Represents the Body or the material world (Prakriti).
   \item The First Bird (Jivatma): Represents the Individual Soul or the Ego. This bird is busy eating the fruits of the tree—some sweet (pleasure) and some bitter (pain). It is deeply involved in the world and affected by its joys and sorrows.
-  \item The Second Bird (Paramatma): Represents the Supreme Soul or Pure Consciousness. This bird sits on a higher branch, calm and silent. It does not eat the fruit; it simply watches the first bird. It is the eternal witness (Sakshi), unaffected by the world. The Philosophical LessonThe Upanishad explains that as long as the first bird (the person) identifies with the "eating" (the actions and results), it remains anxious and unhappy. However, the moment it looks up, recognizes the second bird, and realizes that its true nature is actually that of the silent witness, it becomes free from grief and attains liberation (Moksha).
+  \item The Second Bird (Paramatma): Represents the Supreme Soul or Pure Consciousness. This bird sits on a higher branch, calm and silent. It does not eat the fruit; it simply watches the first bird. It is the eternal witness (Sakshi), unaffected by the world. The philosophical lesson  the upanishad explains that as long as the first bird (the person) identifies with the "eating" (the actions and results), it remains anxious and unhappy. However, the moment it looks up, recognizes the second bird, and realizes that its true nature is actually that of the silent witness, it becomes free from grief and attains liberation (Moksha).
 \end{enumerate}
 \end{multicols}
 \newpage
 
 \section*{Blessed Moments with Daaji}
 \addcontentsline{toc}{section}{Blessed Moments with Daaji}
-\begin{multicols}{2}
+\begin{essay}
 \noindent Meditation has transformed my life in a beautiful and meaningful way. Under the blessings and guidance of Daaji, I discovered greater peace, balance, and clarity in my thoughts, behaviour, and lifestyle. This inner journey slowly reflected in every part of my life — in my routine business, my love for birding, and my passion for photography. Nature began to speak more deeply to my heart, and every moment became a lesson in mindfulness and gratitude. Through meditation, I learned to live with patience, compassion, and simplicity. In every step of my journey, I continue to seek the blessings of Daaji, whose wisdom inspires me to walk through life with harmony, joy, and inner peace.
 
-\end{multicols}
 \attribphotoraw{height=4cm}{daaj.jpeg}{Written by: P. Radhakrishna Pai\\(Mathru Kripa)}
+\end{essay}
 \newpage
 
 \section*{My Journey of Photography}
 \addcontentsline{toc}{section}{My Journey of Photography}
 \begin{multicols}{2}
-\noindent My interest in photography began with beautiful stories and curiosity. After completing my education, I used to visit Geetha Studio near our shop in Vittal every day. The studio was owned by Late Mr. Keshava Nayak and Late Madhumathi Akka. Watching them work kindled my passion — slowly, I learned the basics of photography, film developing, and printing in dark rooms. Those were the days of black and white photos, and digital cameras were unheard of — photography was all about patience and light. Later, I joined our grocery wholesale and retail business, and my photography passion paused for nearly forty years.
+\noindent My interest in photography began with beautiful stories and curiosity. After completing my education, I used to visit Geetha Studio near our shop in Vittal every day. The studio was owned by Late Mr. Keshava Nayak and Late Madhumathi akka. Watching them work kindled my passion — slowly, I learned the basics of photography, film developing, and printing in dark rooms. Those were the days of black and white photos, and digital cameras were unheard of — photography was all about patience and light. Later, I joined our grocery wholesale and retail business, and my photography passion paused for nearly forty years.
 
 One day, my childhood friend Mr. Keshava Vittla, a talented photo journalist who had worked for many leading newspapers and also ran his own studio, visited me. One of his relatives had opened a new studio in Vittal and wanted to sell a Canon DSLR camera. He encouraged me to buy it, and I agreed. That moment marked the rebirth of my photographic journey.
 
-Slowly, I began capturing again, upgraded my cameras and lenses, and improved my skills. A friend then suggested me to open a Facebook account, where I started posting my photos of birds. Day by day, the likes and appreciation I received from people inspired me to move my hobby to the next level. Through this, I made many birding and photography friends across India and the world.
+Slowly, I began capturing again, upgraded my cameras and lenses, and improved my skills. A friend then suggested me to open a Facebook account, where I started posting my photos of birds. Day by day, the appreciation I received from people inspired me to move my hobby to the next level. Through this, I made many birding and photography friends across India and the world.
 
 In my early days, I didn't know much about birds or their habitats. One day, after I posted a picture of a bird, Mr. Shiva Shankar from Karkala commented with the correct name. Later, he gifted me his book "Birds of Coastal Karnataka" — filled with his own photographs. That book became a great guide and motivation for me.
 
@@ -493,7 +515,7 @@ With warm wishes for your continued journey in photography and the conservation 
 \label{bird:1}
 \vspace{0.5em}
 \noindent
-\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/6 s.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the misty forests of Coorg, morning broke with the scent of coffee blossoms and the hum of life hidden among the trees. As sunlight filtered softly through
+\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \birdimage{Vrathik2gb/Vrathik/6 s.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the misty forests of Coorg, morning broke with the scent of coffee blossoms and the hum of life hidden among the trees. As sunlight filtered softly through
 
 the canopy, the forest awoke in golden whispers.Amid this calm beauty, a gentle flutter caught my eye — the Yellow-browed Bulbul, perched gracefully on a mossy branch. Its bright yellow feathers glowed against the green, and its sweet, clear call echoed through the hills like a melody of joy.\end{minipage}
 \newpage
@@ -511,7 +533,7 @@ the blend of light, song and silence. It reminded me, that in Coorg, every sunri
 \noindent
 \begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the leafy avenues of Mysore, where ancient trees tell stories of time, the morning air was filled with the fragrance of rain-soaked earth. As I looked up, sunlight streamed through the branches — and there it was, the Indian Grey Hornbill, perched high, calm and regal.
 
-Its large curved bill and soft grey plumage blended beautifully with the old tree bark, a true guardian of the canopy. Every gentle movement, every call echoed with quiet strength — a reminder of how gracefully nature weaves majesty into simplicity.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/frame_l_67.jpg}\end{minipage}
+Its large curved bill and soft grey plumage blended beautifully with the old tree bark, a true guardian of the canopy. Every gentle movement, every call echoed with quiet strength — a reminder of how gracefully nature weaves majesty into simplicity.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \birdimage{Vrathik2gb/Vrathik/frame_l_67.jpg}\end{minipage}
 \newpage
 \vspace*{0.3cm}
 \noindent This serene encounter in Mysore's green heart made me realize — some of nature's greatest wonders do not dazzle with color, but with their quiet dignity.
@@ -523,7 +545,7 @@ Its large curved bill and soft grey plumage blended beautifully with the old tre
 \label{bird:3}
 \vspace{0.5em}
 \noindent
-\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/s16.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the golden grasslands of Saswad, Maharashtra, the morning Sun painted the fields with a soft glow. Alongside my birding companion Datta Nagre, I scanned the open plains where wind and silence danced together.\end{minipage}
+\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \birdimage{Vrathik2gb/Vrathik/s16.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the golden grasslands of Saswad, Maharashtra, the morning Sun painted the fields with a soft glow. Alongside my birding companion Datta Nagre, I scanned the open plains where wind and silence danced together.\end{minipage}
 \newpage
 \vspace*{0.3cm}
 \noindent Suddenly, out of the tall grass, rose a striking sight — the Crested Bunting (male), shining in deep black and chestnut tones, its tiny crest swaying gently in the breeze. It perched proudly on a dry stem, as if posing for the morning light itself.
@@ -549,7 +571,7 @@ We watched in silent awe as it called out softly, vanishing back into the emeral
 \label{bird:5}
 \vspace{0.5em}
 \noindent
-\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/14 s.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent Nestled in the misty hills of Coorg, where coffee blossoms scent the air and streams sing softly through emerald valleys, nature reveals her finest art. On one such peaceful morning, camera in hand, I wandered through the dew-kissed woods, listening to awakening forest.
+\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \birdimage{Vrathik2gb/Vrathik/14 s.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent Nestled in the misty hills of Coorg, where coffee blossoms scent the air and streams sing softly through emerald valleys, nature reveals her finest art. On one such peaceful morning, camera in hand, I wandered through the dew-kissed woods, listening to awakening forest.
 
 Amid the symphony of chirps and rustling leaves, a sudden flash of color caught my eyes the Flame-throated Bulbul, glowing like a spark of fire in the green mist. Its bright throat shone against the dark foliage, a living gem of the Western Ghats.\end{minipage}
 \newpage
@@ -583,7 +605,7 @@ Our photography in Coorg became more than just a birding trip. It was a story of
 \label{bird:7}
 \vspace{0.5em}
 \noindent
-\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/frame 93.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the tranquil forests of Sattal, Uttarakhand, where sunlight filters softly through oak and pine, the morning began with a melody of wings. The forest was alive — every rustle, every chirp whispered the secrets of the Himalayas.
+\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \birdimage{Vrathik2gb/Vrathik/frame 93.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the tranquil forests of Sattal, Uttarakhand, where sunlight filters softly through oak and pine, the morning began with a melody of wings. The forest was alive — every rustle, every chirp whispered the secrets of the Himalayas.
 
 Then, from the shadowed bushes, emerged a burst of color — the Red-bellied Leiothrix, a tiny bird glowing with shades of gold, green, and scarlet. It perched gracefully on a mossy branch, as if nature herself had painted it with love.\end{minipage}
 \newpage
@@ -599,7 +621,7 @@ Then, from the shadowed bushes, emerged a burst of color — the Red-bellied Lei
 \noindent
 \begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the misty valleys of Rong Tong, Darjeeling, the morning unfolded like a dream — clouds drifting low, hills wrapped in silence, and the scent of rain in the air. Alongside my birding friend Debpratim Shah, I wandered through the emerald slopes, camera ready, heart open to the wild.
 
-Then, from the tall fig tree, came a sudden flutter — a magnificent Oriental Pied Hornbill appeared, its curved bill gleaming in the soft mountain light. With every call echoing through the valley, it felt as though the hills themselves were speaking.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/s21.jpg}\end{minipage}
+Then, from the tall fig tree, came a sudden flutter — a magnificent Oriental Pied Hornbill appeared, its curved bill gleaming in the soft mountain light. With every call echoing through the valley, it felt as though the hills themselves were speaking.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \birdimage{Vrathik2gb/Vrathik/s21.jpg}\end{minipage}
 \newpage
 \vspace*{0.3cm}
 \noindent The meeting of mist, mountain, and melody was magical. In its majestic flight, the hornbill carried the spirit of Darjeeling's forests — free, timeless, and full of grace.
@@ -627,7 +649,7 @@ Then, in the middle of a mossy tree, we saw it — a Common Emerald Dove, shimme
 \noindent
 \begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the misty hills of Somvarpet, Coorg, the morning air was cool and filled with the fragrance of wild coffee flowers. Along with my birding friend Sathish Sarakki, I wandered through the wet leaves and soft breeze, listening to the melodies of the forest.
 
-Then, on a slender branch, appeared a Grey-headed Bulbul — its olive-green body glowing softly against the mist, its grey crown glistening with dew. It sang a gentle tune, as if the forest itself was humming along. Every note carried the calm of Coorg's rain-wrapped beauty.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/frame 8.jpg}\end{minipage}
+Then, on a slender branch, appeared a Grey-headed Bulbul — its olive-green body glowing softly against the mist, its grey crown glistening with dew. It sang a gentle tune, as if the forest itself was humming along. Every note carried the calm of Coorg's rain-wrapped beauty.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \birdimage{Vrathik2gb/Vrathik/frame 8.jpg}\end{minipage}
 \newpage
 \vspace*{0.3cm}
 \noindent For a moment, everything else faded — only the bird, the mist, and the music remained. The Grey-headed Bulbul reminded us that peace doesn't shout; it sings softly in nature's voice.
