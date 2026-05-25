@@ -59,6 +59,45 @@
   \begin{flushright}\itshape #1\end{flushright}%
 }
 
+% Square cropped portrait.
+% #1 = square side length (e.g., "4cm")
+% #2 = \includegraphics sizing options (e.g., "height=4.2cm" or "width=4.2cm")
+% #3 = vertical shift for the image inside the square (negative shifts image
+%      down so more of the photo's upper portion is visible — useful for
+%      portrait shots where the face sits above center)
+% #4 = image path
+\newcommand{\portraitsquare}[4]{%
+  \begin{tikzpicture}
+    \node[rectangle, minimum size=#1, line width=0.4pt, draw=ink!30, inner sep=0pt,
+          path picture={\node[yshift=#3] at (path picture bounding box.center){\includegraphics[#2]{#4}};}]
+      {};
+  \end{tikzpicture}%
+}
+
+% Attribution with a square portrait above the text, both right-aligned.
+% Kept on one page by wrapping in a minipage.
+% #1=size #2=img opts #3=yshift #4=image path #5=attribution text
+\newcommand{\attribphoto}[5]{%
+  \par\vspace{0.6em}%
+  \noindent\hfill\begin{minipage}{0.55\linewidth}\raggedleft%
+    \portraitsquare{#1}{#2}{#3}{#4}\\[0.3em]
+    \itshape #5%
+  \end{minipage}%
+  \par
+}
+
+% Same as \attribphoto, but renders the photo at its natural aspect ratio
+% (no square crop). #1 = \includegraphics sizing options, #2 = image path,
+% #3 = attribution text.
+\newcommand{\attribphotoraw}[3]{%
+  \par\vspace{0.6em}%
+  \noindent\hfill\begin{minipage}{0.55\linewidth}\raggedleft%
+    \tikz\node[rectangle, line width=0.4pt, draw=ink!30, inner sep=0pt]{\includegraphics[#1]{#2}};\\[0.3em]
+    \itshape #3%
+  \end{minipage}%
+  \par
+}
+
 % --- Title page / centered helpers ---
 \usepackage{xcolor}
 \definecolor{ink}{HTML}{1f1f1f}
@@ -221,7 +260,7 @@
 \noindent Meditation has transformed my life in a beautiful and meaningful way. Under the blessings and guidance of Daaji, I discovered greater peace, balance, and clarity in my thoughts, behaviour, and lifestyle. This inner journey slowly reflected in every part of my life — in my routine business, my love for birding, and my passion for photography. Nature began to speak more deeply to my heart, and every moment became a lesson in mindfulness and gratitude. Through meditation, I learned to live with patience, compassion, and simplicity. In every step of my journey, I continue to seek the blessings of Daaji, whose wisdom inspires me to walk through life with harmony, joy, and inner peace.
 
 \end{multicols}
-\attribution{Written by: P. Radhakrishna Pai\\(Mathru Kripa)}
+\attribphotoraw{height=4cm}{daaj.jpeg}{Written by: P. Radhakrishna Pai\\(Mathru Kripa)}
 \newpage
 
 \section*{My Journey of Photography}
@@ -256,7 +295,7 @@ I am blessed with a loving family of my own. My wife, Smt. Anuradha Pai, is my l
 
 We are blessed with twin daughters, Shraddha and Shreya, who have grown into graceful, well-educated, and cultured women. They both got married to twin brothers — Sanketh Phadnis and Saurabh Phadnis, and are now well settled in Mumbai with the blessings of my parents.
 
-My younger brother, Subraya Pai, and elder sisters, Smt. Kalpana Nayak and Smt. Shubhakiran Shenoy, have always been pillars of love and support. Together, our family stands as one — built on faith, values, and gratitude.
+My younger brother Subraya Pai, and my sisters Smt. Kalpana Nayak and Smt. Shubhakiran Shenoy, have always been pillars of love and support. Together, our family stands as one — built on faith, values, and gratitude.
 
 Truly, I owe everything to my parents and family, whose blessings guide every step of my life.
 
@@ -285,8 +324,11 @@ With love and admiration,
 
 We wish him continued joy, success and countless more flights of discovery through the world of birds and beyond.
 
+\par\vspace{0.8em}
+\hfill\portraitsquare{6.5cm}{height=6.7cm}{0.2cm}{twinsister.jpeg}
+
+\par\itshape\raggedleft Written by: Shraddha Pai Phadnis and Shreya Pai Phadnis
 \end{multicols}
-\attribution{Written by: Shraddha Pai Phadnis and Shreya Pai Phadnis}
 \newpage
 
 \section*{My Life Partner}
@@ -299,7 +341,9 @@ He started this journey nearly 15–16 years ago. In those early days, when he w
 I am truly proud of you.
 
 \end{multicols}
-\attribution{With Love\\Anuradha Pai}
+\enlargethispage{2cm}
+\nopagebreak[4]
+\attribphoto{3.5cm}{width=3.7cm}{-0.6cm}{anuradha.jpeg}{With Love\\Anuradha Pai}
 \newpage
 
 \section*{My Elder Brother’s Endeavour}
@@ -307,8 +351,11 @@ I am truly proud of you.
 \begin{multicols}{2}
 \noindent It is a feeling of privilege to write about my elder brother, Radhakrishna Pai’s passion towards bird photography. I remember the words of my Guru, where he once said that we should all chase a hobby which will ultimately help us in our fifties to lead a balanced life. Being a busy man, running multiple family owned businesses while simultaneously chasing his passion and hobbies is not an easy task. But my brother is able to find time for both with fine balance. I truly appreciate his photography journey, it is one that makes him a true lover of nature and fuels his growth as a refined human being. Hearty congratulations to him on his maiden book release on the eve of his successful completion of sixty years. My sincere prayers to Almighty to bless him with tons of happiness, health ,success and prosperity in the coming years, with lots of time to pursue his hobbies and passion.
 
+\par\vspace{0.8em}
+\hfill\tikz\node[rectangle, line width=0.4pt, draw=ink!30, inner sep=0pt]{\includegraphics[height=4cm]{subra.jpeg}};
+
+\par\itshape\raggedleft With Love\\P. Subraya Pai
 \end{multicols}
-\attribution{P. Subraya Pai}
 \newpage
 
 \section*{Moments Across Miles}
@@ -361,7 +408,7 @@ The story of P. Radhakrishna Pai's journey into photography encompasses several 
 \noindent These themes collectively highlight the transformative power of photography and nature, illustrating how they can shape one’s identity, values, and connections with the world.
 
 \end{multicols}
-\attribution{K. Ullas Kamath\\A relative, friend and an ardent admirer of dear Radhakrishna.}
+\attribphoto{4cm}{width=4.2cm}{-0.3cm}{ullas_kamath.jpeg}{K. Ullas Kamath\\A relative, friend and an ardent admirer of dear Radhakrishna.}
 \newpage
 
 \section*{The Quiet Joy of Photography}
@@ -392,8 +439,11 @@ It gives us great happiness to write these words about my dear friend Radhakrish
 
 From the depths of my heart, I extend my best wishes to this work being published, and to its creator my young friend Radhakrishna Pai.
 
+\par\vspace{0.8em}
+\hfill\tikz\node[rectangle, line width=0.4pt, draw=ink!30, inner sep=0pt]{\includegraphics[height=3cm,angle=90]{z.jpeg}};
+
+\par\itshape\raggedleft — M. Ananthakrishna Hebbar\\"Saaranga", Vittla
 \end{multicols}
-\attribution{— M. Ananthakrishna Hebbar\\"Saaranga", Vittla}
 \newpage
 
 \section*{Pai’s This Venture Has Re-Ignited My Love for Life}
@@ -410,8 +460,11 @@ Because of my old age, I slowly withdrew myself from Jaycee Training, Jaycee Sch
 \begin{multicols}{2}
 \noindent From the depths of my heart, I extend my best wishes to this work being published, and to its creator my young friend Radhakrishna Pai.
 
+\par\vspace{0.8em}
+\hfill\tikz\node[rectangle, line width=0.4pt, draw=ink!30, inner sep=0pt]{\includegraphics[height=4cm]{skm.jpeg}};
+
+\par\itshape\raggedleft Shridhar Kodakkal\\Author and Publisher of Educational Books and\\Senior Trainer of JCI – India.
 \end{multicols}
-\attribution{Shridhar Kodakkal\\Author and Publisher of Educational Books and\\Senior Trainer of JCI – India.}
 \newpage
 
 \section*{Nature Through the Judge’s Eyes}
@@ -424,7 +477,7 @@ Those early experiences with nature give me a special perspective to appreciate 
 With warm wishes for your continued journey in photography and the conservation of nature.
 
 \end{multicols}
-\attribution{— Jayaprakash V.\\Senior Civil Judge \& Judicial Magistrate First Class, Sakleshpura.}
+\attribphoto{4cm}{width=4.2cm}{-1.4cm}{judge.jpeg}{— Jayaprakash V.\\Senior Civil Judge \& Judicial Magistrate First Class, Sakleshpura.}
 \newpage
 
 \thispagestyle{empty}
@@ -440,7 +493,7 @@ With warm wishes for your continued journey in photography and the conservation 
 \label{bird:1}
 \vspace{0.5em}
 \noindent
-\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \begin{tikzpicture}\draw[dashed, line width=0.4pt, color=ink!35] (0,0) rectangle (12.0,-11.5);\node[anchor=center] at (6.0,-5.75) {\headingfont\fontsize{14pt}{16pt}\selectfont\textcolor{ink!45}{PHOTO}};\end{tikzpicture}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the misty forests of Coorg, morning broke with the scent of coffee blossoms and the hum of life hidden among the trees. As sunlight filtered softly through
+\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/6 s.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the misty forests of Coorg, morning broke with the scent of coffee blossoms and the hum of life hidden among the trees. As sunlight filtered softly through
 
 the canopy, the forest awoke in golden whispers.Amid this calm beauty, a gentle flutter caught my eye — the Yellow-browed Bulbul, perched gracefully on a mossy branch. Its bright yellow feathers glowed against the green, and its sweet, clear call echoed through the hills like a melody of joy.\end{minipage}
 \newpage
@@ -458,7 +511,7 @@ the blend of light, song and silence. It reminded me, that in Coorg, every sunri
 \noindent
 \begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the leafy avenues of Mysore, where ancient trees tell stories of time, the morning air was filled with the fragrance of rain-soaked earth. As I looked up, sunlight streamed through the branches — and there it was, the Indian Grey Hornbill, perched high, calm and regal.
 
-Its large curved bill and soft grey plumage blended beautifully with the old tree bark, a true guardian of the canopy. Every gentle movement, every call echoed with quiet strength — a reminder of how gracefully nature weaves majesty into simplicity.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \begin{tikzpicture}\draw[dashed, line width=0.4pt, color=ink!35] (0,0) rectangle (12.0,-11.5);\node[anchor=center] at (6.0,-5.75) {\headingfont\fontsize{14pt}{16pt}\selectfont\textcolor{ink!45}{PHOTO}};\end{tikzpicture}\end{minipage}
+Its large curved bill and soft grey plumage blended beautifully with the old tree bark, a true guardian of the canopy. Every gentle movement, every call echoed with quiet strength — a reminder of how gracefully nature weaves majesty into simplicity.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/frame_l_67.jpg}\end{minipage}
 \newpage
 \vspace*{0.3cm}
 \noindent This serene encounter in Mysore's green heart made me realize — some of nature's greatest wonders do not dazzle with color, but with their quiet dignity.
@@ -470,7 +523,7 @@ Its large curved bill and soft grey plumage blended beautifully with the old tre
 \label{bird:3}
 \vspace{0.5em}
 \noindent
-\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \begin{tikzpicture}\draw[dashed, line width=0.4pt, color=ink!35] (0,0) rectangle (12.0,-11.5);\node[anchor=center] at (6.0,-5.75) {\headingfont\fontsize{14pt}{16pt}\selectfont\textcolor{ink!45}{PHOTO}};\end{tikzpicture}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the golden grasslands of Saswad, Maharashtra, the morning Sun painted the fields with a soft glow. Alongside my birding companion Datta Nagre, I scanned the open plains where wind and silence danced together.\end{minipage}
+\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/s16.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the golden grasslands of Saswad, Maharashtra, the morning Sun painted the fields with a soft glow. Alongside my birding companion Datta Nagre, I scanned the open plains where wind and silence danced together.\end{minipage}
 \newpage
 \vspace*{0.3cm}
 \noindent Suddenly, out of the tall grass, rose a striking sight — the Crested Bunting (male), shining in deep black and chestnut tones, its tiny crest swaying gently in the breeze. It perched proudly on a dry stem, as if posing for the morning light itself.
@@ -496,7 +549,7 @@ We watched in silent awe as it called out softly, vanishing back into the emeral
 \label{bird:5}
 \vspace{0.5em}
 \noindent
-\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \begin{tikzpicture}\draw[dashed, line width=0.4pt, color=ink!35] (0,0) rectangle (12.0,-11.5);\node[anchor=center] at (6.0,-5.75) {\headingfont\fontsize{14pt}{16pt}\selectfont\textcolor{ink!45}{PHOTO}};\end{tikzpicture}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent Nestled in the misty hills of Coorg, where coffee blossoms scent the air and streams sing softly through emerald valleys, nature reveals her finest art. On one such peaceful morning, camera in hand, I wandered through the dew-kissed woods, listening to awakening forest.
+\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/14 s.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent Nestled in the misty hills of Coorg, where coffee blossoms scent the air and streams sing softly through emerald valleys, nature reveals her finest art. On one such peaceful morning, camera in hand, I wandered through the dew-kissed woods, listening to awakening forest.
 
 Amid the symphony of chirps and rustling leaves, a sudden flash of color caught my eyes the Flame-throated Bulbul, glowing like a spark of fire in the green mist. Its bright throat shone against the dark foliage, a living gem of the Western Ghats.\end{minipage}
 \newpage
@@ -530,7 +583,7 @@ Our photography in Coorg became more than just a birding trip. It was a story of
 \label{bird:7}
 \vspace{0.5em}
 \noindent
-\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \begin{tikzpicture}\draw[dashed, line width=0.4pt, color=ink!35] (0,0) rectangle (12.0,-11.5);\node[anchor=center] at (6.0,-5.75) {\headingfont\fontsize{14pt}{16pt}\selectfont\textcolor{ink!45}{PHOTO}};\end{tikzpicture}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the tranquil forests of Sattal, Uttarakhand, where sunlight filters softly through oak and pine, the morning began with a melody of wings. The forest was alive — every rustle, every chirp whispered the secrets of the Himalayas.
+\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/frame 93.jpg}\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the tranquil forests of Sattal, Uttarakhand, where sunlight filters softly through oak and pine, the morning began with a melody of wings. The forest was alive — every rustle, every chirp whispered the secrets of the Himalayas.
 
 Then, from the shadowed bushes, emerged a burst of color — the Red-bellied Leiothrix, a tiny bird glowing with shades of gold, green, and scarlet. It perched gracefully on a mossy branch, as if nature herself had painted it with love.\end{minipage}
 \newpage
@@ -546,7 +599,7 @@ Then, from the shadowed bushes, emerged a burst of color — the Red-bellied Lei
 \noindent
 \begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the misty valleys of Rong Tong, Darjeeling, the morning unfolded like a dream — clouds drifting low, hills wrapped in silence, and the scent of rain in the air. Alongside my birding friend Debpratim Shah, I wandered through the emerald slopes, camera ready, heart open to the wild.
 
-Then, from the tall fig tree, came a sudden flutter — a magnificent Oriental Pied Hornbill appeared, its curved bill gleaming in the soft mountain light. With every call echoing through the valley, it felt as though the hills themselves were speaking.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \begin{tikzpicture}\draw[dashed, line width=0.4pt, color=ink!35] (0,0) rectangle (12.0,-11.5);\node[anchor=center] at (6.0,-5.75) {\headingfont\fontsize{14pt}{16pt}\selectfont\textcolor{ink!45}{PHOTO}};\end{tikzpicture}\end{minipage}
+Then, from the tall fig tree, came a sudden flutter — a magnificent Oriental Pied Hornbill appeared, its curved bill gleaming in the soft mountain light. With every call echoing through the valley, it felt as though the hills themselves were speaking.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/s21.jpg}\end{minipage}
 \newpage
 \vspace*{0.3cm}
 \noindent The meeting of mist, mountain, and melody was magical. In its majestic flight, the hornbill carried the spirit of Darjeeling's forests — free, timeless, and full of grace.
@@ -574,7 +627,7 @@ Then, in the middle of a mossy tree, we saw it — a Common Emerald Dove, shimme
 \noindent
 \begin{minipage}[t][11.5cm][t]{11.5cm}\justifying \noindent In the misty hills of Somvarpet, Coorg, the morning air was cool and filled with the fragrance of wild coffee flowers. Along with my birding friend Sathish Sarakki, I wandered through the wet leaves and soft breeze, listening to the melodies of the forest.
 
-Then, on a slender branch, appeared a Grey-headed Bulbul — its olive-green body glowing softly against the mist, its grey crown glistening with dew. It sang a gentle tune, as if the forest itself was humming along. Every note carried the calm of Coorg's rain-wrapped beauty.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \begin{tikzpicture}\draw[dashed, line width=0.4pt, color=ink!35] (0,0) rectangle (12.0,-11.5);\node[anchor=center] at (6.0,-5.75) {\headingfont\fontsize{14pt}{16pt}\selectfont\textcolor{ink!45}{PHOTO}};\end{tikzpicture}\end{minipage}
+Then, on a slender branch, appeared a Grey-headed Bulbul — its olive-green body glowing softly against the mist, its grey crown glistening with dew. It sang a gentle tune, as if the forest itself was humming along. Every note carried the calm of Coorg's rain-wrapped beauty.\end{minipage}\hspace{0.8cm}\begin{minipage}[t][11.5cm][c]{12.0cm}\centering \includegraphics[width=12cm,height=11.5cm,keepaspectratio]{Vrathik2gb/Vrathik/frame 8.jpg}\end{minipage}
 \newpage
 \vspace*{0.3cm}
 \noindent For a moment, everything else faded — only the bird, the mist, and the music remained. The Grey-headed Bulbul reminded us that peace doesn't shout; it sings softly in nature's voice.
